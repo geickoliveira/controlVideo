@@ -1,0 +1,57 @@
+body{
+    background-image: linear-gradient(to left, #30cfd0 0%, #330867 100%);
+}
+
+.container{
+    width: 640px;
+    height: 360px;
+    position: relative;
+    margin: auto;
+    border: 2px solid;
+}
+
+#video{
+    width: 100%;
+}
+
+.buttons{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    display: none;
+}
+#video:hover + .buttons{
+    display: block;
+}
+
+.btn{
+    position: relative;
+    width: 50px;
+    padding: 10px;
+    top: 100%;
+    transform: translateY(-110%);
+}
+
+.btn:active{
+    background-color: gray;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:640px){
+    .container{
+        width: auto;
+        border: none;
+    }
+
+    .buttons{
+        display: block;
+        position: relative;
+    }
+
+    .btn{
+        width: 20px;
+        top: 0;
+    }
+}
